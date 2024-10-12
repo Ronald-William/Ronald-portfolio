@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronald William Joseph - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 90px;
+            background-color: rgb(36, 10, 61);
+            box-shadow: 2px 4px 20px rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul a:hover {
+            color: rgb(153, 0, 255);
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 120px;
+            flex-wrap: wrap;
+            /* Allow wrapping */
+        }
+
+        .firstSection>div {
+            width: 40%;
+            margin-bottom: 20px;
+        }
+
+        .rightSection img {
+            width: 100%;
+            /* Make the image responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .purple {
+            color: rgb(153, 51, 248);
+        }
+
+        .leftSection span {
+            text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+            border-right: 3px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3s steps(30), blink 0.95s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .footcenter {
+            text-align: center;
+            font-size: large;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: rgb(255, 255, 255);
+            padding: 15px 0;
+            box-shadow: 0px -3px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgb(36, 10, 61);
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: rgb(153, 0, 255);
+            box-shadow: 0px 4px 15px rgba(153, 0, 255, 0.4);
+        }
+
+        h1 {
+            text-align: center;
+            background-color: blueviolet;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 40px;
+            padding: 10px;
+            text-shadow: 2px 2px 7px black;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 7px rgb(88, 88, 88);
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .proj1,
+        .proj2 {
+            width: 80%;
+            height: auto;
+            /* Maintain aspect ratio */
+            margin-bottom: 40px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+        }
+
+        .proj1 img,
+        .proj2pic {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        #contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(36, 10, 61, 0.9);
+        }
+
+        .social-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 15px rgba(255, 255, 255, 0.3);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid white;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(36, 10, 61);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(153, 0, 255);
+        }
+
+        .social-links {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .social-links a {
+            color: rgb(153, 51, 248);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: white;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .firstSection>div {
+                width: 90%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .left {
+                font-size: 1.25rem;
+            }
+
+            .leftSection {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .proj1,
+            .proj2 {
+                width: 95%;
+                /* Make projects more responsive */
+            }
+
+            .proj1 img,
+            .proj2pic {
+                width: 100%;
+                /* Ensure images in projects are responsive */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .leftSection {
+                font-size: 1.75rem;
+            }
+
+            nav ul a {
+                font-size: 1rem;
+            }
+
+            .left {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                /* Adjust h3 size */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ronald's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <a href="#home">
+                        <li>Home</li>
+                    </a>
+                    <a href="#projects">
+                        <li>Projects</li>
+                    </a>
+                    <a href="#contact">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="firstSection" id="home">
+        <div class="leftSection">
+            Hi, I am <span class="purple">Ronald William Joseph.</span>
+            <div>I am an aspiring software engineer.</div>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+        <div class="rightSection">
+            <img src="IMG_20240503_223806217~2.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h1>PROJECTS</h1>
+        <div class="project-container">
+            <div class="proj1">
+                <h3>Library Management System</h3>
+                <p>A Python-based library management system with a Tkinter GUI. It supports user roles for
+                    administrators (managing books and members) and library users (searching, borrowing, and returning
+                    books). Data is stored using MySQL and backed up in binary files. Features include book search,
+                    sorting, and exception handling (e.g., overdue books). The system enhances library efficiency by
+                    automating manual processes.</p>
+                <img src="Screenshot 2024-10-12 103537.png" alt="Library Management System" height="600px">
+            </div>
+            <div class="proj2">
+                <h3>Job Portal</h3>
+                <p>A responsive web platform that connects job seekers and recruiters. It allows recruiters to post jobs
+                    and manage applicants, while job seekers can search for jobs, apply, and upload resumes. The
+                    platform features advanced search filters, secure login, and a user-friendly interface optimized for
+                    multiple devices.</p>
+
+                <img src="gd.png" alt="Job Portal" class="proj2pic" height="600px">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <div class="social-links">
+            <h3>Connect with Me:</h3>
+            <a href="https://www.linkedin.com/in/ronald-william-joseph-227375270/" target="_blank">LinkedIn</a>
+            <a href="https://leetcode.com/u/ronaldjoseph439/" target="_blank">LeetCode</a>
+            <a href="https://www.hackerrank.com/profile/ronaldjoseph439" target="_blank">HackerRank</a>
+            <a href="https://www.geeksforgeeks.org/user/ronaldjoevxu/" target="_blank">GeeksforGeeks</a>
+            <a href="https://github.com/Ronald-William" target="_blank">Github</a>
+        </div>
+        <form action="mailto:ronaldjoseph438@gmail.com" method="post" enctype="text/plain">
+            <div>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footcenter">
+        <p>&copy; 2024 Ronald William Joseph. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
